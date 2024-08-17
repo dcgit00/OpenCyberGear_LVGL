@@ -121,6 +121,10 @@ extern CyberGear_FeedBack_t motor_info;	//CyberGear电机反馈数据信息
 #define WAIT_CAN_HANDLE 0x01	//等待CAN数据处理
 #define OVER_CAN_HANDLE 0x00	//CAN数据处理完毕
 
+int float_to_uint(float f_val, float f_val_min, float f_val_max, int int_bits);
+double radians_to_degrees(double radians);
+double degrees_to_radians(double degrees);
+
 void CyberGear_CAN_Init(void);
 void CyberGear_Init(void);
 int CyberGear_Motor_Send_Data(CyberGear_Info_t *data);
